@@ -128,14 +128,7 @@ server <- function(input, output, session) {
                   x = 5, y = 10, size = 8) +
         theme_void()
     }else{
-      sel <- history$nueva
-      base_card +
-        geom_text(data = sel,
-                  aes(label = title), x = 5, y = 12, size = 8) +
-        geom_text(data = sel,
-                  aes(label = description), x = 5, y = 5) +
-        geom_text(data = sel,
-                  aes (label = name), x = 1, y = 14, size = 5)
+      plot_card(card = history$nueva, pallete = colores)
     }
 
   })
